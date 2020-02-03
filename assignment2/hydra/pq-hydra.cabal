@@ -1,0 +1,42 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 018720d72b3102d296eb6810d4860f5186d65419bebc43db2cc59254b817f42f
+
+name:           pq-hydra
+version:        0.1.0.0
+synopsis:       Ensure you have a Haskell setup
+license:        NCSA
+build-type:     Simple
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_pq_hydra
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base >=4.9 && <5
+  default-language: Haskell2010
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Lib
+      Paths_pq_hydra
+  hs-source-dirs:
+      test
+      src
+  ghc-options: -Wall
+  build-depends:
+      QuickCheck
+    , base >=4.9 && <5
+    , test-framework
+    , test-framework-quickcheck2
+  default-language: Haskell2010

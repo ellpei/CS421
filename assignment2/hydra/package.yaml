@@ -1,0 +1,24 @@
+name:                pq-hydra
+version:             0.1.0.0
+synopsis:            Ensure you have a Haskell setup
+license:             NCSA
+
+ghc-options: -Wall
+
+dependencies:
+- base >= 4.9 && < 5
+
+library:
+    source-dirs:        src
+    exposed-modules:    Lib
+ 
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs:
+      - test
+      - src
+    dependencies:
+      - QuickCheck
+      - test-framework
+      - test-framework-quickcheck2
